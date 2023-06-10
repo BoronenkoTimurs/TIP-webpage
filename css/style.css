@@ -1,0 +1,115 @@
+/* Typography */
+html {
+    background-color: hsl(30, 38%, 92%);
+    padding: 14px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Cards */
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(1, 450px);
+    margin: 0 auto;
+}
+
+.cards_img_container {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: url(/images/image-product-desktop.jpg);
+}
+
+.cards_article {
+    padding: 30px;
+    background: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cards_item {
+    letter-spacing: 6px;
+    font-family: Montserrat;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 10px 0 15px 0;
+}
+
+.cards_name {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 32px;
+    margin-top: 10px;
+    line-height: 32px;
+}
+
+.cards_paragraph {
+    color: hsl(158, 36%, 37%);
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.cards_price {
+    margin: 30px 0;
+}
+
+.cards_current_price {
+    display: inline-block;
+    font-size: 30px;
+    font-family: Fraunces;
+    color: hsl(158, 36%, 37%);
+}
+
+.cards_old_price {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    padding-left: 16px;
+    bottom: 5px;
+    text-decoration: line-through;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: hsl(158, 36%, 37%);
+}
+
+.cards_btn {
+    cursor: pointer;
+    display: block;
+    width: 250px;
+    height: 50px;
+    background: hsl(158, 36%, 37%);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+}
+
+.cards_btn:hover {
+    background: hsl(156, 36%, 26%);;
+}
+
+.cards_btn_text {
+    color: #fff;
+    font-family: Montserrat;
+}
+
+@media screen and (max-width: 375px) {
+    .cards_container {
+        grid-template-columns: 343px;
+        grid-template-rows: 240px;
+    }
+
+    .cards_img_container {
+        background: url(/images/image-product-mobile.jpg);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .cards_btn {
+        width: 283px;
+    }
+}
