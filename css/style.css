@@ -1,115 +1,260 @@
-/* Typography */
+:root {
+    --color-dark-dray: hsl(0, 0%, 55%);
+    --color-very-dark-gray: hsl(0, 0%, 41%);
+}
+
 html {
-    background-color: hsl(30, 38%, 92%);
-    padding: 14px;
 }
 
-p {
-    font-size: 14px;
+body {
+    max-width: 1440px;
+    font-size: 15px;
+    margin: 10px;
 }
 
-/* Cards */
-.cards_container {
+/* Hero */
+.hero {
+    max-width: 100%;
+    margin: 30px;
     display: grid;
-    grid-template-columns: repeat(2, 300px);
-    grid-template-rows: repeat(1, 450px);
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.hero_img {
+    max-width: 100%;
+    max-height: 250px;
+    min-height: 0;
+    min-width: 0;
+}
+
+.hero_article {
+    background-color: #fff;
+}
+
+.hero_name {
+    font-family: Josefin Sans;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.hero_text {
+    font-family: Alata;
+    text-align: center;
+    color: var(--color-dark-dray);
+}
+
+@media screen and (min-width: 375px) {
+    .hero {
+        position: absolute;
+        grid-template-columns: auto 400px;
+        grid-template-rows: repeat(1, auto);
+    }
+
+    .hero_article {
+        position: relative;
+        right: 20%;
+        top: 40%;
+    }
+
+    .hero_img {
+        height: 250px;
+        min-width: 365.5px;
+    }
+}
+
+/* Creations */
+.creations {
+    font-family: Josefin Sans;
+}
+
+.creations_name {
+    text-align: center;
+    font-weight: 300;
+    font-size: 26px;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+.creations_gallery {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(8, 120px);
+}
+
+.creations_text {
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    padding: 20px 0 30px 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.creations_img {
+    max-width: 100%;
+    max-height: 110px;
+}
+
+.creations_card {
+    max-height: 130px;
+    margin: 0;
+    color: #ffffff;
+    background-size: cover;
+    margin-bottom: 20px;
+    box-shadow: 70px 0px 60px 0px rgba(0, 0, 0, 0.5) inset;
+}
+
+.creations_card:nth-child(1) {
+    background: url(../images/mobile/image-deep-earth.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(2) {
+    background: url(../images/mobile/image-night-arcade.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(3) {
+    background: url(../images/mobile/image-soccer-team.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(4) {
+    background: url(../images/mobile/image-grid.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(5) {
+    background: url(../images/mobile/image-from-above.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(6) {
+    background: url(../images/mobile/image-pocket-borealis.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(7) {
+    background: url(../images/mobile/image-curiosity.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(8) {
+    background: url(../images/mobile/image-fisheye.jpg);
+    background-size: cover;
+}
+
+.creations_card:nth-child(1) {
+    background: url(../images/mobile/image-deep-earth.jpg);
+    background-size: cover;
+}
+
+.creations_text {
+    position: relative;
+}
+
+.creations_btn {
+    font-family: Alata;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-weight: 100;
+    padding: 10px 30px;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.creations_btn:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.creations_btn_shell {
+    width: 142.24px;
     margin: 0 auto;
 }
 
-.cards_img_container {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background: url(/images/image-product-desktop.jpg);
-}
-
-.cards_article {
-    padding: 30px;
-    background: #fff;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.cards_item {
-    letter-spacing: 6px;
-    font-family: Montserrat;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin: 10px 0 15px 0;
-}
-
-.cards_name {
-    font-family: Fraunces;
-    font-weight: 700;
-    font-size: 32px;
-    margin-top: 10px;
-    line-height: 32px;
-}
-
-.cards_paragraph {
-    color: hsl(158, 36%, 37%);
-    font-family: Montserrat;
-    font-weight: 500;
-    line-height: 20px;
-}
-
-.cards_price {
-    margin: 30px 0;
-}
-
-.cards_current_price {
-    display: inline-block;
-    font-size: 30px;
-    font-family: Fraunces;
-    color: hsl(158, 36%, 37%);
-}
-
-.cards_old_price {
-    display: inline-block;
-    position: relative;
-    font-size: 12px;
-    padding-left: 16px;
-    bottom: 5px;
-    text-decoration: line-through;
-    font-family: Montserrat;
-    font-weight: 500;
-    color: hsl(158, 36%, 37%);
-}
-
-.cards_btn {
-    cursor: pointer;
-    display: block;
-    width: 250px;
-    height: 50px;
-    background: hsl(158, 36%, 37%);
-    border: 0;
-    outline: 0;
-    border-radius: 10px;
-}
-
-.cards_btn:hover {
-    background: hsl(156, 36%, 26%);;
-}
-
-.cards_btn_text {
-    color: #fff;
-    font-family: Montserrat;
-}
-
-@media screen and (max-width: 375px) {
-    .cards_container {
-        grid-template-columns: 343px;
-        grid-template-rows: 240px;
+@media screen and (min-width: 375px) {
+    .creations_gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 276px);
+        grid-template-rows: repeat(2, 470px);
+        width: 1184px;
+        margin: 0 auto;
     }
 
-    .cards_img_container {
-        background: url(/images/image-product-mobile.jpg);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+    .creations_text {
+        padding: 350px 100px 20px 20px;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 30px;
     }
 
-    .cards_btn {
-        width: 283px;
+    .creations_card {
+        background-size: 256px 450px;
+        margin: 10px;
+        max-height: 99999px;
+        height: 450px;
+        box-shadow: 0 -50px 70px 50px rgba(0, 0, 0, .5) inset;
+    }
+
+    .creations_card:nth-child(1) {
+        background: url(../images/desktop/image-deep-earth.jpg) no-repeat;
+    }
+
+    .creations_card:nth-child(2) {
+        background: url(../images/desktop/image-night-arcade.jpg) no-repeat;
+    }
+
+    .creations_card:nth-child(3) {
+        background: url(../images/desktop/image-soccer-team.jpg) no-repeat;
+    }
+
+    .creations_card:nth-child(4) {
+        background: url(../images/desktop/image-grid.jpg) no-repeat;
+    }
+
+    .creations_card:nth-child(5) {
+        background: url(../images/desktop/image-from-above.jpg) no-repeat;
+    }
+
+    .creations_card:nth-child(6) {
+        background: url(../images/desktop/image-pocket-borealis.jpg) no-repeat;
+    }
+
+    .creations_card:nth-child(7) {
+        background: url(../images/desktop/image-curiosity.jpg) no-repeat;
+    }
+
+    .creations_card:nth-child(8) {
+        background: url(../images/desktop/image-fisheye.jpg) no-repeat;
+    }
+
+    .creations_name {
+        text-align-last: left;
+    }
+
+    .creations_btn_shell {
+        position: absolute;
+        top: 30px;
+        left: 1100px;
+    }
+
+    .creations_btn {
+        border: 1.5px solid black;
+        border-radius: 2px;
+    }
+
+    .creations {
+        margin: 0 150px;
     }
 }
